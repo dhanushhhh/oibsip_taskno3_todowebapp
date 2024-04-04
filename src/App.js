@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'C:/Users/Asus/Desktop/to-do/todo-app/src/index.css';
+import 'C:/Users/Asus/Desktop/to-do/todo-app/to-do/src/index.css';
 import { FaEdit, FaTrash } from 'react-icons/fa'; // Importing icons from Font Awesome
 import logo from './logom.png';
 
