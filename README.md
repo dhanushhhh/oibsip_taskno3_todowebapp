@@ -4,7 +4,7 @@ This repository contains a simple todo web application developed as part of Leve
 
 ## Minimates Todo Web App
 
-![Minimates Logo](logom.png)
+![Minimates Logo](src/logom.png)
 
 Minimates is a simple todo web app built using React. It allows users to add, edit, mark as completed, and delete tasks.
 
@@ -26,7 +26,7 @@ Minimates is a simple todo web app built using React. It allows users to add, ed
 
 ## Screenshot
 
-(Add screenshots here if available)
+![ss](minis.png)
 
 
 ## Acknowledgments
