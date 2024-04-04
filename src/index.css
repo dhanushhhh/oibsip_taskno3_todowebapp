@@ -1,0 +1,487 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Stylish', serif; /* Change font family */
+}
+*:focus-visible {
+  outline: 3px dashed #228bec;
+  outline-offset: 0;
+}
+/* Your existing CSS styles */
+
+.logo-wrapper {
+  text-align: center; /* Center the logo */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.logo {
+  width: 50px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+html {
+  font: 62.5% / 1.15 sans-serif;
+}
+h1,
+h2 {
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+button {
+  -moz-osx-font-smoothing: inherit;
+  -webkit-font-smoothing: inherit;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+input[type="text"] {
+  border-radius: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #ccc;
+  transition: border-bottom-color 0.2s;
+}
+input[type="text"]:focus {
+  border-bottom-color: #4d4d4d;
+}
+body {
+  background-color: #f5f5f5;
+  color: #4d4d4d;
+  font: 1.6rem/1.25 Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 68rem;
+  width: 100%;
+}
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 1.9rem;
+    line-height: 1.31579;
+  }
+}
+
+/* End resets */
+/* Global styles */
+.form-group > input[type="text"] {
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+/* Smooth hover effect for the "Add" button */
+.btn.btn__primary:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Smooth hover effect for the filter buttons */
+.btn.toggle-btn:hover {
+  background-color: #d3d3d3; /* Light gray background on hover */
+  color: #000; /* Black text on hover */
+}
+
+/* Dark theme for the active filter button */
+.btn.toggle-btn[aria-pressed="true"] {
+  border-color: #4d4d4d;
+  text-decoration: underline;
+}
+
+.btn.toggle-btn[aria-pressed="true"]:hover {
+  background-color: #4d4d4d; /* Dark gray background on hover */
+  color: #fff; /* White text on hover */
+}
+
+
+.btn {
+  border: 0.2rem solid #161616;
+  cursor: pointer;
+  padding: 0.8rem 1rem 0.7rem;
+  text-transform: capitalize;
+}
+.btn.toggle-btn {
+  border-color: #d3d3d3;
+  border-width: 1px;
+}
+.btn.toggle-btn[aria-pressed="true"] {
+  border-color: #4d4d4d;
+  text-decoration: underline;
+}
+.btn__danger {
+  background-color: #f30909;
+  border-color: #e70a20;
+  color: #fff;
+}
+.btn__filter {
+  border-color: lightgrey;
+}
+.btn__primary {
+  background-color: #000;
+  color: #fff;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-group > * {
+  flex: 1 1 49%;
+}
+.btn-group > * + * {
+  margin-left: 0.8rem;
+}
+.label-wrapper {
+  flex: 0 0 100%;
+  margin: 0;
+  text-align: center;
+}
+.visually-hidden {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+  
+}
+[class*="stack"] > * {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.stack-small > * + * {
+  margin-top: 1.25rem;
+}
+.stack-large > * + * {
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 550px) {
+  .stack-small > * + * {
+    margin-top: 1.4rem;
+  }
+  .stack-large > * + * {
+    margin-top: 2.8rem;
+  }
+}
+.stack-exception {
+  margin-top: 1.2rem;
+}
+/* End global styles */
+/* General app styles */
+.todoapp {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  position: relative;
+}
+@media screen and (min-width: 550px) {
+  .todoapp {
+    padding: 4rem;
+  }
+  
+}
+.todoapp > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50rem;
+}
+.todoapp > form {
+  max-width: 100%;
+}
+.todoapp > h1 {
+  display: block;
+  margin: 0;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  text-align: center;
+}
+.label__lg {
+  line-height: 1.01567;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  text-align: center;
+}
+.input__lg {
+  border: 2px solid #3421a0;
+  padding: 2rem;
+  color: white; /* Add text color */
+}
+
+.input__lg:focus-visible {
+  border-color: #f5eeee;
+  box-shadow: inset 0 0 0 2px;
+}
+[class*="__lg"] {
+  display: inline-block;
+  font-size: 1.9rem;
+  width: 100%;
+}
+[class*="__lg"]:not(:last-child) {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 620px) {
+  [class*="__lg"] {
+    font-size: 2.4rem;
+  }
+}
+/* End general app styles */
+/* Todo item styles */
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.todo:hover {
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.todo-actions button:focus {
+  outline: none;
+}
+
+.todo-label {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.todo-text {
+  border: 2px solid #565656;
+  min-height: 4.4rem;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+
+.todo-text:focus-visible {
+  box-shadow: inset 0 0 0 2px;
+}
+
+
+.todo-edit {
+  display: flex;
+  align-items: center;
+}
+
+.todo-edit input {
+  flex: 1;
+  margin-right: 0;
+}
+
+/* Checkbox styles */
+.c-cb {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  clear: left;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  min-height: 44px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.c-cb > label::before,
+.c-cb > input[type="checkbox"] {
+  box-sizing: border-box;
+  height: 44px;
+  left: -2px;
+  top: -2px;
+  width: 44px;
+}
+
+.c-cb > input[type="checkbox"] {
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.c-cb > label {
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
+  touch-action: manipulation;
+}
+
+.c-cb > label::before {
+  background: transparent;
+  border: 2px solid currentcolor;
+  content: "";
+  position: absolute;
+}
+
+.c-cb > input[type="checkbox"]:focus-visible + label::before {
+  border-width: 4px;
+  outline: 3px dashed #228bec;
+}
+
+.c-cb > label::after {
+  background: transparent;
+  border: solid;
+  border-width: 0 0 5px 5px;
+  border-top-color: transparent;
+  box-sizing: content-box;
+  content: "";
+  height: 7px;
+  left: 9px;
+  opacity: 0;
+  position: absolute;
+  top: 11px;
+  transform: rotate(-45deg);
+  width: 18px;
+}
+
+.c-cb > input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}
+
+/* Dark theme */
+body {
+  background-color: #000; /* Black background */
+  color: #f5f5f5; /* Light gray text */
+  font: 1.6rem/1.25 Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 68rem;
+  width: 100%;
+}
+
+.todoapp {
+  background: #070707; /* Darker gray background */
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
+}
+
+.btn {
+  border: 0.2rem solid #4e4d4d; /* Dark gray border */
+  color: #f5f5f5; /* Light gray text */
+}
+
+.btn.toggle-btn[aria-pressed="true"] {
+  border-color: #f5f5f5; /* Light gray border */
+}
+
+.btn__danger {
+  background-color: #ff0303; /* Red color */
+}
+
+.btn__primary {
+  background-color: #05429c; /* Blue color */
+}
+
+.todo {
+  background-color: #1f1c1c; /* Darker gray background */
+  border: 2px solid #1d1c1c; /* Border color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.todo:hover {
+  background-color: #454545; /* Darker hover background */
+}
+
+.todo-text {
+  background-color: #333333; /* Darker gray background */
+  border: 2px solid #555555; /* Border color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.todo-text:hover {
+  background-color: #454545; /* Darker hover background */
+}
+
+.c-cb > label::before {
+  background: #1a1b1b; /* Blue color */
+  border-color: #1d1e1f; /* Blue color */
+}
+
+.c-cb > input[type="checkbox"]:checked + label::after {
+  border-top-color: #4d94ff; /* Blue color */
+  border-right-color: #4d94ff; /* Blue color */
+}
+
+/* Make the circular checkbox and ensure smooth appearance */
+.c-cb {
+  position: relative; /* Ensure relative positioning for absolute positioning of the circular shape */
+}
+
+.c-cb > label::before {
+  border: 2px solid #4d4d4d; /* Dark gray border */
+  border-radius: 50%; /* Make it circular */
+  content: ""; /* No content */
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust position as needed */
+  transform: translateY(-50%);
+}
+
+.c-cb > input[type="checkbox"]:checked + label::before {
+  background-color: #4d94ff; /* Blue color */
+  border-color: #4d94ff; /* Blue color */
+}
+
+/* Styling the circular shape on hover */
+.c-cb > label:hover::before {
+  background-color: #454545; /* Darker hover background */
+}
+
+/* Styling the circular shape when checkbox is checked */
+.c-cb > input[type="checkbox"]:checked + label::before {
+  background-color: #4d94ff; /* Blue color */
+}
+
